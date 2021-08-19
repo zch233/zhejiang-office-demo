@@ -7,13 +7,13 @@ export default defineComponent({
   name: 'App',
   setup() {
     const tabMap = [
-      {title: '计生服务', type: 41},
-      {title: '为老服务', type: 41},
-      {title: '党建服务', type: 41},
-      {title: '志愿扶贫', type: 41},
-      {title: '城市管理', type: 41},
-      {title: '劳动保障', type: 41},
-      {title: '助残服务', type: 41},
+      {title: '计生服务', type: 1},
+      {title: '为老服务', type: 2},
+      {title: '党建服务', type: 3},
+      {title: '志愿扶贫', type: 4},
+      {title: '城市管理', type: 5},
+      {title: '劳动保障', type: 6},
+      {title: '助残服务', type: 7},
     ];
     const active = ref(2);
     return () => (
