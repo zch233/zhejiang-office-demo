@@ -8,6 +8,9 @@
   color: #363A44;
   display: flex;
   flex-direction: column;
+  .myLoading {
+    color: #B3B5B9;
+  }
 }
 .guideTab {
   &-item {

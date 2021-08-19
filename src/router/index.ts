@@ -9,6 +9,7 @@ export const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'List',
     component: () => import('../List'),
+    meta: {keepAlive: true},
   },
   {
     path: '/detail/:id',
