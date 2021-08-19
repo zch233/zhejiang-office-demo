@@ -6,6 +6,7 @@ import * as path from 'path';
 const pathResolve = (pathStr: string) =>  path.resolve(__dirname, pathStr)
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     vue(),
     vueJsx(),
