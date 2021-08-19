@@ -1,5 +1,4 @@
 import { defineComponent, onMounted, ref } from 'vue';
-import './app.scss';
 import { useRoute, useRouter } from 'vue-router';
 import { getDetail } from './utils/request/api';
 import { Item } from './GuideTab';
