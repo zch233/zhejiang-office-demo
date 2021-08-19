@@ -36,6 +36,13 @@
     }
   }
 }
+.detailWrapper {
+  min-height: 100vh;
+  background-color: #fff;
+  .van-nav-bar .van-icon {
+    color: #363A44;
+  }
+}
 .detail {
   padding: 16px;
   &-title {

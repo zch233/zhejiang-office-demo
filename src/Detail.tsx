@@ -1,14 +1,16 @@
 import { defineComponent, onMounted, ref } from 'vue';
 import './app.scss';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { getDetail } from './utils/request/api';
 import { Item } from './GuideTab';
 import { clearToast, showLoadingToast } from './utils/toast';
+import { NavBar, Sticky } from 'vant';
 
 export default defineComponent({
   name: 'Detail',
   setup() {
     const route = useRoute()
+    const router = useRouter()
     const detail = ref<Partial<Item>>({})
     const getData = async () => {
       showLoadingToast()
@@ -25,11 +27,20 @@ export default defineComponent({
       getData()
     })
     return () => (
-      <section class={'detail'}>
-        <h1 class={'detail-title'}>{detail.value.title}</h1>
-        <p class={'detail-info'}>社区连线 <span>{detail.value.add_time}</span></p>
-        {/*// @ts-ignore*/}
-        <div class={'detail-content'} vHtml={detail.value.content}/>
+      <section class={'detailWrapper'}>
+        <Sticky>
+          <NavBar
+            title="正文"
+            leftArrow
+            onClick-left={() => router.back()}
+          />
+        </Sticky>
+        <div class="detail">
+          <h1 class={'detail-title'}>{detail.value.title}</h1>
+          <p class={'detail-info'}>社区连线 <span>{detail.value.add_time}</span></p>
+          {/*// @ts-ignore*/}
+          <div class={'detail-content'} vHtml={detail.value.content}/>
+        </div>
       </section>
     );
   }
