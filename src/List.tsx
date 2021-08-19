@@ -17,7 +17,7 @@ export default defineComponent({
     ];
     const active = ref(2);
     return () => (
-      <div class={'app'}>
+      <div class={'list'}>
         <Tabs active={active.value} onUpdate:active={e => active.value = e} color={'#428FFC'} title-active-color={'#428FFC'} title-inactive-color={'#363A44'}>
           {tabMap.map(v => <Tab title={v.title} title-style={{fontSize: '14px'}}>
             <GuideTab type={v.type} />

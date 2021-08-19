@@ -1,5 +1,6 @@
 import { defineComponent } from 'vue';
 import {RouterView} from 'vue-router'
+import Footer from './Footer';
 
 export default defineComponent({
   name: 'App',
@@ -7,6 +8,7 @@ export default defineComponent({
     return () => (
       <main class={'app'}>
         <RouterView />
+        <Footer />
       </main>
     );
   }
