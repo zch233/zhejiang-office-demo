@@ -1,4 +1,4 @@
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import { Tab, Tabs } from 'vant';
 import './app.scss';
 import GuideTab from './GuideTab';
@@ -15,10 +15,9 @@ export default defineComponent({
       {title: '劳动保障', type: 6},
       {title: '助残服务', type: 7},
     ];
-    const active = ref(2);
     return () => (
       <div class={'list'}>
-        <Tabs active={active.value} onUpdate:active={e => active.value = e} color={'#428FFC'} title-active-color={'#428FFC'} title-inactive-color={'#363A44'}>
+        <Tabs color={'#428FFC'} title-active-color={'#428FFC'} title-inactive-color={'#363A44'}>
           {tabMap.map(v => <Tab title={v.title} title-style={{fontSize: '14px'}}>
             <GuideTab type={v.type} />
           </Tab>)}
