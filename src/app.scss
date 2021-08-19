@@ -2,3 +2,37 @@
   margin: 0;
   padding: 0;
 }
+.app {
+  background-color: #f6f7f8;
+  min-height: 100vh;
+  color: #363A44;
+}
+.guideTab {
+  &-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    background-color: #fff;
+    border-left: 6px solid #428FFC;
+    padding: 10px;
+    &-icon {
+      flex-shrink: 0;
+      width: 50px;
+      img {width: 100%;vertical-align: middle;}
+    }
+    &-content {
+      padding: .7em 10px;
+      border-left: 1px solid #e8e9ec;
+      margin-left: 10px;
+      flex: 1;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &-right {
+      flex-shrink: 0;
+      color: #e8e9ec;
+    }
+  }
+}
