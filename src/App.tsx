@@ -29,14 +29,16 @@ export default defineComponent({
       });
 
     });
-    // @ts-ignore
     return () => (
       <main class={'app'}>
         <RouterView>
-          {({Component, route}: any) => Component ? (route.meta.keepAlive ? <KeepAlive><><Component /><Footer /></>
-          </KeepAlive> : <><Component /><Footer /></>) : <p class={'myLoading'}>loading...</p>}
+          {({Component}: any) => <>
+            {Component ? (<KeepAlive include={['List']}><Component /></KeepAlive>) :
+              <p class={'myLoading'}>loading...</p>}
+            <Footer />
+          </>
+          }
         </RouterView>
-
       </main>
     );
   }
