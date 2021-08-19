@@ -7,8 +7,8 @@ type _ScrollPositionNormalized = {
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'App',
-    component: () => import('../App'),
+    name: 'List',
+    component: () => import('../List'),
   },
   {
     path: '/detail/:id',

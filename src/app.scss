@@ -36,3 +36,30 @@
     }
   }
 }
+.detail {
+  padding: 16px;
+  &-title {
+    font-size: 22px;
+    color: #363A44;
+    line-height: 1.4;
+  }
+  &-info {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    line-height: 1;
+    border-bottom: 1px solid #e8e9ec;
+    span {
+      margin-left: .7em;
+      font-size: 16px;
+      color: #B3B5B9;
+    }
+  }
+  &-content {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #363A44;
+  }
+}

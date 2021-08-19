@@ -17,7 +17,7 @@ export const getList = (data: GetList) =>
   });
 
 type GetDetail = {
-  infoid: number;
+  id: number;
   openid: string;
   unionid: string;
   communityid: number;
@@ -25,7 +25,7 @@ type GetDetail = {
 export const getDetail = (data: GetDetail) =>
   // @ts-ignore
   request({
-    url: '/communityInfo/is_set_activityMember_info',
+    url: '/communityInfo/get_info',
     method: 'post',
     banRepeatCancel: true,
     data,

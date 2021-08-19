@@ -5,7 +5,7 @@ import { getList } from './utils/request/api';
 import { clearToast, showLoadingToast } from './utils/toast';
 import { useRouter } from 'vue-router';
 
-type Item = {
+export type Item = {
   activity_result: string;
   add_time: string;
   can_review: number;
