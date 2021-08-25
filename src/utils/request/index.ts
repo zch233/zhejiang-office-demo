@@ -2,7 +2,7 @@ import { showFailToast } from '../toast';
 import axios, { AxiosRequestConfig } from 'axios';
 
 export const request = axios.create({
-  baseURL: 'https://www.shiliuapp.net:8088',
+  baseURL: 'https://www.shiliuapp.net/zlb',
   timeout: 120 * 1000,
 });
 
