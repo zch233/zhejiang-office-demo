@@ -1,4 +1,5 @@
 import { request } from '../index';
+
 type GetList = {
   type: number;
   subtype: number;
@@ -8,7 +9,6 @@ type GetList = {
   communityid: number;
 }
 export const getList = (data: GetList) =>
-  // @ts-ignore
   request({
     url: '/communityInfo/get_info',
     method: 'post',
@@ -23,7 +23,6 @@ type GetDetail = {
   communityid: number;
 }
 export const getDetail = (data: GetDetail) =>
-  // @ts-ignore
   request({
     url: '/communityInfo/get_info',
     method: 'post',
